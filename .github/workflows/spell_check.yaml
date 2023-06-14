@@ -18,12 +18,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: 14
 
       - name: Install cspell
         run: npm install -g cspell
 
       - name: Run cspell
-        uses: jonaskello/simple-cspell-action@v1
+        uses: streetsidesoftware/cspell-action@v1
         with:
-          files: '**/*.dart'
+          glob: '**/*.dart'
